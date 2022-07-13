@@ -279,31 +279,71 @@ PageMethods._staticInstance.UploadImage(imageData,onSuccess,onFailed,userContext
 <div class="row">
 <div class="col-md-12">
 <div class="container">
+<!-- ########## MODAL START ############# -->
 
-<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title" id="modalLabel">Upload and Size Photo</h5>
-</div>
-<div class="modal-body">
-<div class="img-container">
-<img id="Img1" src="../../images/preview1.jpg" alt="Picture" class="cropper-hidden"><div class="cropper-container" touch-action="none" style="width: 200px; height: 100px;"><div class="cropper-wrap-box"><div class="cropper-canvas" style="width: 132.948px; height: 100px; transform: translateX(33.526px);"><img src="https://www.sparklingdirect.co.uk/images/preview1.jpg" alt="Picture" class="cropper-hide" style="width: 132.948px; height: 100px; transform: translateY(-7.10543e-15px);"></div></div><div class="cropper-drag-box cropper-crop cropper-modal" data-cropper-action="crop"></div><div class="cropper-crop-box" style="width: 66.474px; height: 49.8555px; transform: translateX(66.763px) translateY(25.0723px);"><span class="cropper-view-box"><img src="https://www.sparklingdirect.co.uk/images/preview1.jpg" alt="Picture" style="width: 132.948px; height: 100px; transform: translateX(-33.237px) translateY(-25.0723px);"></span><span class="cropper-dashed dashed-h"></span><span class="cropper-dashed dashed-v"></span><span class="cropper-center"></span><span class="cropper-face cropper-move" data-cropper-action="all"></span><span class="cropper-line line-e" data-cropper-action="e"></span><span class="cropper-line line-n" data-cropper-action="n"></span><span class="cropper-line line-w" data-cropper-action="w"></span><span class="cropper-line line-s" data-cropper-action="s"></span><span class="cropper-point point-e" data-cropper-action="e"></span><span class="cropper-point point-n" data-cropper-action="n"></span><span class="cropper-point point-w" data-cropper-action="w"></span><span class="cropper-point point-s" data-cropper-action="s"></span><span class="cropper-point point-ne" data-cropper-action="ne"></span><span class="cropper-point point-nw" data-cropper-action="nw"></span><span class="cropper-point point-sw" data-cropper-action="sw"></span><span class="cropper-point point-se" data-cropper-action="se"></span></div></div>
-</div>
-<div class="btn-group">
-<label class="btn btn-success btn-upload" for="inputImage" title="Upload Image">
-<input type="file" class="sr-only" id="inputImage" name="file" accept="image/*">
-<span class="docs-tooltip" data-toggle="tooltip" title="" data-bs-original-title="Upload Image">Upload Photo</span>
-</label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-</div>
-<div class="modal-footer">
-<button type="button" id="modalDismiss" onclick="switchModal()" class="btn btn-primary" data-dismiss="modal">Continue</button>
-<a class="btn btn-primary" id="download" href="javascript:void(0);" download="cropped.jpg" hidden="hidden">Download</a>
-</div>
-</div>
-</div>
-</div>
+    <div
+      class="modal fade"
+      id="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Upload and Size Photo</h5>
+          </div>
+          <div class="modal-body">
+            <div class="img-container">
+              <img id="Img1" src="../../images/preview1.jpg" alt="Picture" />
+            </div>
+            <div class="btn-group">
+              <label
+                class="btn btn-success btn-upload"
+                for="inputImage"
+                title="Upload Image"
+              >
+                <input
+                  type="file"
+                  class="sr-only"
+                  id="inputImage"
+                  name="file"
+                  accept="image/*"
+                />
+                <span
+                  class="docs-tooltip"
+                  data-toggle="tooltip"
+                  title="Upload Image"
+                  >Upload Photo</span
+                >
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              id="modalDismiss"
+              onclick="switchModal()"
+              class="btn btn-primary"
+              data-dismiss="modal"
+              >Continue</button
+            >
+            <a
+              class="btn btn-primary"
+              id="download"
+              href="javascript:void(0);"
+              download="cropped.jpg"
+              hidden="hidden"
+              >Download</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- ########## MODAL End ############# -->
+
+
 </div>
 </div>
 </div>
@@ -328,107 +368,262 @@ PageMethods._staticInstance.UploadImage(imageData,onSuccess,onFailed,userContext
 
 <div class="content">
 
-<div id="third">
-<ul class="nav nav-pills" role="tablist">
-<li class="nav-item">
-<a class="nav-link active" id="photoPick" data-toggle="pill" href="#choosephoto">Choose Photo</a>
-</li>
-<li class="nav-item">
-<a  class="nav-link" id="designLabel" data-toggle="pill" href="#positionphoto">Design Label</a>
-</li>
-</ul>
 
-<div id="uploadSec" class="tab-content">
-<div id="choosephoto" class="container tab-pane active">
-<button type="button" class="btn btn-primary" data-target="#modal" data-toggle="modal" style="width: 220px">
-Upload Your Photo
-</button>
-</div>
-</div>
-</div>
-<div id="positionphoto" class="container hide tab-pane fade">
-<div class="row" id="actions">
-<div class="col-md-12 docs-buttons">
-<div class="row">
-<img src="../../images/n1photo.png" alt="" width="200" height="50">
-</div>
-<div class="form-group">
-<span id="ctl00_MainContent_item_wrapper" class="riSingle RadInput RadInput_Bootstrap" style="width:200px;"><input id="ctl00_MainContent_item" name="ctl00$MainContent$item" size="20" class="riTextBox riEnabled" type="text" value=""><input id="ctl00_MainContent_item_ClientState" name="ctl00_MainContent_item_ClientState" type="hidden" autocomplete="off" value="{&quot;enabled&quot;:true,&quot;emptyMessage&quot;:&quot;&quot;,&quot;validationText&quot;:&quot;&quot;,&quot;valueAsString&quot;:&quot;&quot;,&quot;lastSetTextBoxValue&quot;:&quot;&quot;}"></span>
-<div class="row">
-<img src="../../images/s5photo.png" alt="" width="200" height="50">
-</div>
-<div class="row">
-<div class="btn-group">
-<button type="button" class="btn btn-primary" data-method="zoom" data-option="-0.1" title="Zoom Out">
-<span class="docs-tooltip" data-toggle="tooltip" title="" data-bs-original-title="Zoom Out">
-<span class="fa fa-search-minus"></span>
-</span>
-</button>
-<button type="button" class="btn btn-primary" data-method="zoom" data-option="0.1" title="Zoom In">
-<span class="docs-tooltip" data-toggle="tooltip" title="" data-bs-original-title="Zoom In">
-<span class="fa fa-search-plus"></span>
-</span>
-</button>
-</div>
-</div>
-<hr>
-<div class="row">
-<div class="btn-group">
-<button type="button" class="btn btn-primary" data-method="move" data-option="-10" data-second-option="0" title="Move Left">
-<span class="docs-tooltip" data-toggle="tooltip" title="" data-bs-original-title="Move Left">
-<span class="fa fa-arrow-left"></span>
-</span>
-</button>
-<button type="button" class="btn btn-primary" data-method="move" data-option="10" data-second-option="0" title="Move Right">
-<span class="docs-tooltip" data-toggle="tooltip" title="" data-bs-original-title="Move Right">
-<span class="fa fa-arrow-right"></span>
-</span>
-</button>
-<button type="button" class="btn btn-primary" data-method="move" data-option="0" data-second-option="-10" title="Move Up">
-<span class="docs-tooltip" data-toggle="tooltip" title="" data-bs-original-title="Move Up">
-<span class="fa fa-arrow-up"></span>
-</span>
-</button>
-<button type="button" class="btn btn-primary" data-method="move" data-option="0" data-second-option="10" title="Move Down">
-<span class="docs-tooltip" data-toggle="tooltip" title="" data-bs-original-title="Move Down">
-<span class="fa fa-arrow-down"></span>
-</span>
-</button>
-</div>
-</div>
-<hr>
-<div class="row">
-<img src="../../images/s4photo.png" alt="" width="200" height="50">
-</div>
-<div class="btn-group btn-group-crop">
-<div class="row">
-<button type="button" class="btn btn-success" style="width: 200px; border-radius: 15px" data-method="getCroppedCanvas" data-option="{ &quot;width&quot;: 2300, &quot;height&quot;: 1730 }">
-<span class="docs-tooltip" data-toggle="tooltip" title="" data-bs-original-title="cropper.getCroppedCanvas({ width: 299, height: 168 })">Create Label</span>
-</button></div>
-<div class="form-group"> </div>
-</div>
+    <!-- ########## TABS ################## -->
 
-<div class="modal fade docs-cropped" id="getCroppedCanvasModal" role="dialog" aria-hidden="true" aria-labelledby="getCroppedCanvasTitle" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title" id="getCroppedCanvasTitle">Cropped</h5>
-<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-<span aria-hidden="true">×</span>
-</button>
-</div>
-<div class="modal-body"></div>
-<div class="modal-footer">
-<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-<a class="btn btn-primary" id="A1" href="javascript:void(0);" download="cropped.jpg">Download</a>
-<textarea class="form-control" id="pData" placeholder=""></textarea>
-</div>
-</div>
-</div> </div> </div>
-<div class="col-md-6 docs-toggles"> </div>
-</div>
-</div>
-</div>
+    <!-- Nav pills -->
+    <div id="third">
+      <ul class="nav nav-pills" role="tablist">
+        <li onclick="choosePhoto()" class="nav-item">
+          <a
+            class="nav-link active"
+            id="photoPick"
+            data-toggle="pill"
+            href="#choosephoto"
+            >Choose Photo</a
+          >
+        </li>
+        <li onclick="showDesign()" class="nav-item">
+          <a
+            class="nav-link"
+            id="designLabel"
+            data-toggle="pill"
+            href="#positionphoto"
+            >Design Label</a
+          >
+        </li>
+      </ul>
+      <!-- Tab panes -->
+      <div id="uploadSec" class="tab-content">
+        <div id="choosephoto" class="container tab-pane active">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-target="#modal"
+            data-toggle="modal"
+            style="width: 220px"
+          >
+            Upload Your Photo
+          </button>
+        </div>
+      </div>
+    </div>
+      <!-- Nav pills End -->
+      <!-- Start -->
+  <div id="positionphoto" class="container hide tab-pane fade">
+      <div class="row" id="actions">
+        <div class="col-md-12 docs-buttons">
+          <div class="row">
+            <img
+              src="../../images/n1photo.png"
+              alt=""
+              width="200"
+              height="50"
+            />
+          </div>
+          <div class="form-group">
+            <telerik:RadTextBox
+              ID="item"
+              runat="server"
+              Skin="Bootstrap"
+              Width="200px"
+            ></telerik:RadTextBox>
+            <div class="row">
+              <img
+                src="../../images/s5photo.png"
+                alt=""
+                width="200"
+                height="50"
+              />
+            </div>
+            <div class="row">
+              <div class="btn-group">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-method="zoom"
+                  data-option="-0.1"
+                  title="Zoom Out"
+                >
+                  <span
+                    class="docs-tooltip"
+                    data-toggle="tooltip"
+                    title="Zoom Out"
+                  >
+                    <span class="fa fa-search-minus"></span>
+                  </span>
+                </button>
+
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-method="zoom"
+                  data-option="0.1"
+                  title="Zoom In"
+                >
+                  <span
+                    class="docs-tooltip"
+                    data-toggle="tooltip"
+                    title="Zoom In"
+                  >
+                    <span class="fa fa-search-plus"></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="btn-group">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-method="move"
+                  data-option="-10"
+                  data-second-option="0"
+                  title="Move Left"
+                >
+                  <span
+                    class="docs-tooltip"
+                    data-toggle="tooltip"
+                    title="Move Left"
+                  >
+                    <span class="fa fa-arrow-left"></span>
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-method="move"
+                  data-option="10"
+                  data-second-option="0"
+                  title="Move Right"
+                >
+                  <span
+                    class="docs-tooltip"
+                    data-toggle="tooltip"
+                    title="Move Right"
+                  >
+                    <span class="fa fa-arrow-right"></span>
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-method="move"
+                  data-option="0"
+                  data-second-option="-10"
+                  title="Move Up"
+                >
+                  <span
+                    class="docs-tooltip"
+                    data-toggle="tooltip"
+                    title="Move Up"
+                  >
+                    <span class="fa fa-arrow-up"></span>
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-method="move"
+                  data-option="0"
+                  data-second-option="10"
+                  title="Move Down"
+                >
+                  <span
+                    class="docs-tooltip"
+                    data-toggle="tooltip"
+                    title="Move Down"
+                  >
+                    <span class="fa fa-arrow-down"></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <img
+                src="../../images/s4photo.png"
+                alt=""
+                width="200"
+                height="50"
+              />
+            </div>
+            <div class="btn-group btn-group-crop">
+              <div class="row">
+                <button
+                  type="button"
+                  class="btn btn-success"
+                  style="width: 200px; border-radius: 15px"
+                  data-method="getCroppedCanvas"
+                  data-option='{ "width": <%= getcroppedcanvaswidth.Text %>, "height": <%= getcroppedcanvasheight.Text %> }'
+                >
+                  <span
+                    class="docs-tooltip"
+                    data-toggle="tooltip"
+                    title="cropper.getCroppedCanvas({ width: <%= croppedcanvaswidth.Text %>, height: <%= croppedcanvasheight.Text %> })"
+                    >Create Label</span
+                  >
+                </button></div
+              >
+              <div class="form-group"> </div>
+            </div>
+            <!-- Show the cropped image in modal -->
+            <div
+              class="modal fade docs-cropped"
+              id="getCroppedCanvasModal"
+              role="dialog"
+              aria-hidden="true"
+              aria-labelledby="getCroppedCanvasTitle"
+              tabindex="-1"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="getCroppedCanvasTitle"
+                      >Cropped</h5
+                    >
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body"></div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                      >Close</button
+                    >
+                    <a
+                      class="btn btn-primary"
+                      id="A1"
+                      href="javascript:void(0);"
+                      download="cropped.jpg"
+                      >Download</a
+                    >
+                    <textarea
+                      class="form-control"
+                      id="pData"
+                      placeholder=""
+                    ></textarea>
+                  </div>
+                </div>
+              </div> </div
+            ><!-- /.modal --> </div
+          ><!-- /.docs-buttons -->
+
+          <div class="col-md-6 docs-toggles"> </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENd -->
 </div>
 
 </div>
@@ -590,6 +785,20 @@ Upload Your Photo
       second.style.opacity = 1;
       second.classList.remove("hide");
       };
+      let showDesign=()=>{
+              let second = document.getElementById("positionphoto");
+                let upload = document.getElementById("uploadSec");
+               second.style.opacity = 1;
+                 second.classList.remove("hide");
+                   upload.style.display = "none";
+      }
+      let choosePhoto=()=>{
+          let second = document.getElementById("positionphoto");
+                let upload = document.getElementById("uploadSec");
+               second.style.opacity = 0;
+                 second.classList.add("hide");
+                   upload.style.display = "block";
+      }
   </script>
 <link href="../../Content/style.css" rel="stylesheet">
 <link href="../../Content/owl.carousel.css" rel="stylesheet">
